@@ -26,6 +26,10 @@ body {
   align-items: center;
 }
 
+.count {
+  display: flex;
+}
+
 .countries {
   /* margin-bottom: 8rem; */
   display: flex;
@@ -61,6 +65,10 @@ body {
 .neighbour {
   transform: scale(0.8) translateY(1rem);
   margin-left: 0;
+  background-color: #fff;
+  box-shadow: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 .country__img {
@@ -123,4 +131,26 @@ body {
   margin: 2rem;
   border: 3rem solid white;
   box-shadow: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.spinner {
+  margin: 5rem auto;
+  text-align: center;
+
+  svg {
+    height: 6rem;
+    width: 6rem;
+    fill: #f38e82;
+    animation: rotate 2s infinite linear;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
