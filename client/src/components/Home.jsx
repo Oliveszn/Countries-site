@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SearchInput from "./SearchInput";
+import { FiLoader } from "react-icons/fi";
 
 const Home = ({ onSearch }) => {
   const BASE_URL = "https://restcountries.com/v3.1/name/";
@@ -36,7 +37,11 @@ const Home = ({ onSearch }) => {
   }, []);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="spinner">
+        <FiLoader />
+      </div>
+    );
   }
 
   if (error) {
