@@ -11,16 +11,19 @@ const SearchInput = ({ onSearch }) => {
   };
 
   return (
-    <form onSubmit={submitForm}>
-      <input
-        type="text"
-        placeholder="Search Country...."
-        value={input}
-        onChange={(e) => {
-          setInput(e.target.value);
-        }}
-      />
-    </form>
+    <div className="search-container">
+      <form onSubmit={submitForm}>
+        <input
+          type="text"
+          placeholder="Search Country...."
+          value={input}
+          onChange={(e) => {
+            setInput(e.target.value);
+          }}
+          className="search-input"
+        />
+      </form>
+    </div>
   );
 };
 
