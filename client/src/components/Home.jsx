@@ -3,7 +3,7 @@ import SearchInput from "./SearchInput";
 import { FiLoader } from "react-icons/fi";
 
 const Home = ({ onSearch }) => {
-  const BASE_URL = "https://restcountries.com/v3.1/name/";
+  const BASE_URL = "https://restcountries.com/v3.1/name";
   const [countries, setCountries] = useState([]);
   const [border, setBorder] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -54,7 +54,7 @@ const Home = ({ onSearch }) => {
   };
 
   useEffect(() => {
-    getCountryData("nigeria");
+    getCountryData("");
   }, []);
 
   return (
